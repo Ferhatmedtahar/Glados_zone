@@ -1,4 +1,5 @@
 import { LanguageProvider } from "@/context/language-provider";
+import SmoothScrolling from "@/context/SmoothScrolling";
 import { ThemeProvider } from "@/context/theme-provider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -112,7 +113,7 @@ export default function RootLayout({
         >
           <LanguageProvider>
             <NavBar />
-            {children}
+            <SmoothScrolling>{children}</SmoothScrolling>
             <Footer />
           </LanguageProvider>
         </ThemeProvider>

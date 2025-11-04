@@ -113,7 +113,6 @@ const DirectOrder: React.FC = () => {
       return;
     }
 
-    console.log("Request submitted:", { name, phone, issue });
     setFormSubmitted(true);
 
     try {
@@ -129,16 +128,12 @@ const DirectOrder: React.FC = () => {
         // Save submission status to localStorage
         saveSubmissionStatus();
         setHasSubmittedBefore(true);
-        console.log(
-          "Form submitted successfully - saved to localStorage with 24h cooldown"
-        );
 
         // Show success message for 3 seconds, then show the "already submitted" view
         setTimeout(() => {
           setFormSubmitted(false);
         }, 3000);
       } else {
-        console.log("Form submission failed");
         setFormSubmitted(false);
       }
     } catch (error) {

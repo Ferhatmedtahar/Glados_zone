@@ -52,7 +52,7 @@ const headerVariants = {
 const Socials = () => {
   const { t, dir } = useLanguage();
   const { theme } = useTheme();
-  console.log(theme);
+
   const socialsData = [
     {
       id: 1,
